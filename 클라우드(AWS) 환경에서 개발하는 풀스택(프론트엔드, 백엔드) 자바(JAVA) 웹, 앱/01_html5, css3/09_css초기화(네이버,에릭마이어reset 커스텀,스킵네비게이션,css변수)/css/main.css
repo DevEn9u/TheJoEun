@@ -25,3 +25,12 @@
   color: var(--txt-color-600);
   font-size: 20px;
 }
+
+/* a태그는 브라우저 기본값이 있으므로 컬러 변경시 반드시 적어야 함. */
+.main_news a {
+  border:2px solid red;
+  color: red;
+}
+textarea {
+  width: 300px;
+}

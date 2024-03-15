@@ -16,11 +16,11 @@
 
 /* 컬러 변수 */
 :root {
-  --point--color1: #009223;
-  --point--color2: #ffce32;
-  --txt-color-400: #999;
+  --point--color1: #ff601e;
+  --point--color2: #feb12d;
+  --txt-color-400: #888;
   --txt-color-500: #666;
-  --txt-color-600: #292929;
+  --txt-color-600: #000;
 }
 
 /* rem단위사용시 주석풀고 사용 (24.03.14 16:53) */
@@ -130,6 +130,7 @@ body, input, select, textarea, button, table {
   font-family: '맑은 고딕', 'malgun gothic', 'Apple SD Gothic Neo', sans-serif;
   font-size: 16px; /* 반응형 때 rem으로 변경 (24.03.14 16:54)*/
   color: var(--txt-color-500);
+  letter-spacing: -0.02em;
 }
 
 /* 스킵 네비 */
