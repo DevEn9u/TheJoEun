@@ -1,0 +1,59 @@
+:root {
+  --point--color1: #ff7200;
+  --point--color2: #feb12d;
+  --txt-color-400: #888;
+  --txt-color-500: #666;
+  --txt-color-600: #222;
+}
+body {
+  font-family: 'Noto Sans KR', '맑은 고딕', 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif;
+}
+#wrap {
+  height: 1500px;
+}
+.main_etc {
+  background: #f0f0f0;
+  padding: 70px 0;
+}
+.main_etc .inner {
+  max-width: 1230px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.main_etc .etc {
+  display: flex;
+  gap: 0 15px;
+}
+.main_etc .etc li {
+  /* border: 1px solid red; */
+  width: 25%;
+  box-shadow: 2px 2px 4px rgba(220, 220, 220, 1);
+}
+.main_etc .etc li:hover h3 {
+  color: var(--point--color1);
+}
+.main_etc .etc li a {
+  display: block;
+  height: 250px;
+  padding: 40px 25px 0;
+  background: #fff url(../images/company.svg) no-repeat right 25px bottom 25px /55px auto;
+}
+.main_etc .etc li:nth-child(2) a {
+  background-image: url(../images/mic.svg);
+}
+.main_etc .etc li:nth-child(3) a {
+  background-image: url(../images/chrysanthemum.svg)
+}
+.main_etc .etc li:nth-child(4) a {
+  background-image: url(../images/qna.svg);
+}
+.main_etc .etc h3 {
+  font-size: 22px;
+  color: var(--txt-color-600);
+  font-weight: 700;
+}
+.main_etc .etc p {
+  font-size: 16px;
+  color: var(--txt-color-400);
+  margin-top: 12px;
+}

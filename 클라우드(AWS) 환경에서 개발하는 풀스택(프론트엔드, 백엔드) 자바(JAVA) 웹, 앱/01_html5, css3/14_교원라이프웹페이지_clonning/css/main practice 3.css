@@ -1,0 +1,30 @@
+:root {
+  --point--color1: #ff7200;
+  --point--color2: #feb12d;
+  --txt-color-400: #888;
+  --txt-color-500: #666;
+  --txt-color-600: #222;
+}
+body {
+  font-family: 'Noto Sans KR', '맑은 고딕', 'Malgun Gothic', 'Apple SD Gothic Neo', sans-serif;
+}
+#wrap {
+  height: 1500px;
+}
+.main_etc {
+  background: #f0f0f0;
+  padding: 70px 0;
+}
+.main_etc .inner {
+  max-width: 1230px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.main_etc .etc {
+  display: flex;
+  gap: 0 15px;
+} 
+.main_etc .etc li {
+  width: 25%;
+  box-shadow: 2px 2px 4px rgba(220, 220, 220, 1);
+}
