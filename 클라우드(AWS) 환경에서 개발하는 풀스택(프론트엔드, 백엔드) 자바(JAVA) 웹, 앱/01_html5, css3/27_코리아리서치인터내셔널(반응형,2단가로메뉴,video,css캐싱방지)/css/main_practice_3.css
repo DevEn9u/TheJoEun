@@ -194,7 +194,13 @@
   object-fit: cover;
 }
 .main_slider .slider_bottom {
-/* 여기서부터 시작 */
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+.main_slider .slider_bottom img {
+  width: 100%;
 }
 
 /* pc 분기점 */
@@ -240,6 +246,8 @@
   }
 
   #header .m_gnb_wrap {
+        /* .m_gnb_wrap을 오른쪽으로 밀어버림 */
+    transform: translateX(100%); 
     position: fixed;
     right: 0;
     top: 0;
@@ -312,5 +320,21 @@
   }
   #header .m_gnb .depth2 a:hover {
     opacity: 1;
+  }
+}
+
+/* 모바일 분기점 */
+@media (max-width: 767px) {
+  #header .inner {
+    height: 60px;
+  }
+  #header .logo {
+    width: 106px;
+  }
+  #header .logo a {
+    height: 25px;
+  }
+  #header .lang a {
+    /* font-size */
   }
 }
