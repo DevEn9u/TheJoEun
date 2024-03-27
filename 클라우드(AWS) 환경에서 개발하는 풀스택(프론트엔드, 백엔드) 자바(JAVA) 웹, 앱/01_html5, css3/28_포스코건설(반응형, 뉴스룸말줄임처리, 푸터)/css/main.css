@@ -28,8 +28,7 @@
   /* padding이 25px이기에 25로 지정을 해야 뉴스룸과 딱 맞게 선이 위치함 */
   left: 25px;
   right: 25px;
-  bottom: 0;
-  width: 1200px;
+  bottom: 0; */
   height: 1px;
   background: #e7e7e7;
 }
@@ -40,16 +39,18 @@
   font-size: 48px;
   font-weight: 700;
   line-height: 1.4;
-  margin-bottom: 85px;
 }
+
 .main_newsroom .newsroom {
   display: flex;
   gap: 0 30px;
+  margin-top: 85px;
 }
 .main_newsroom .newsroom li {
   /* border: 2px solid red; */
   width: calc(100% / 3);
 }
+
 .main_newsroom .newsroom .img_wrap {
   /* border: 1px solid black; */
   /* 부모 태그(li)의 가로 기준 16:9(표준 화면 비율) = 100:x, x=56.25% */
@@ -66,6 +67,8 @@
   left: 0;
   top: 0;
 }
+
+
 /* css 속성 aspect-ratio를 이용하여 16:9 만들기 */
 /* .main_newsroom .newsroom .img_wrap {
   border: 2px solid red;
@@ -79,6 +82,9 @@
     inline block 하단에 간격 발생시 기준선을 위로 맞춤 
   vertical-align: top;
 } */
+
+
+
 
 .main_newsroom .newsroom .txt_wrap {
   padding-top: 23px;
@@ -123,6 +129,7 @@
   position: absolute;
   right: 25px;
   top: 40px;
+  color:var(--txt-color-600);
   font-size: 20px;
 }
 .main_newsroom .more_btn::after {
@@ -145,7 +152,7 @@
   background: #ddd
 }
 
-/* footer 디자인 */
+/* footer */
 #footer .footer_top {
   border-top: 1px solid rgba(165, 168, 168, 0.3);
   border-bottom: 1px solid rgba(165, 168, 168, 0.3);
@@ -156,7 +163,7 @@
   max-width: 1250px;
   padding: 0 25px;
   margin: 0 auto;
-  height: 172px;
+  height: 170px;
   /* border: 1px solid red; */
   display: flex;
   align-items: center;
@@ -324,11 +331,11 @@
     top: 25px;
     transform: translateY(0);
   }
-  #footer .footer_top .sns_wrap .sns {
-    gap: 0 10px;
-  }
   #footer .footer_top .sns_wrap h3 {
     display: none;
+  }
+  #footer .footer_top .sns_wrap .sns {
+    gap: 0 10px;
   }
   #footer .footer_top .sns_wrap .sns a {
     width: 30px;
@@ -342,6 +349,7 @@
     height: 90px;
   }
 }
+
 
 /* 모바일 분기점 */
 @media (max-width: 767px) {
