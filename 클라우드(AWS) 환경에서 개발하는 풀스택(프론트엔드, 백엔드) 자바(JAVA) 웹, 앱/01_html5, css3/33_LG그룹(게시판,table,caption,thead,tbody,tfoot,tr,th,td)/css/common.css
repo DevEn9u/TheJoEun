@@ -1,4 +1,4 @@
-@font-face {
+/* @font-face {
   font-family: 'NEXONLv1Gothic';
   font-style: normal;
   font-weight: 700;
@@ -6,7 +6,7 @@
   src: url(../fonts/NEXONLv1GothicLowOTFBold.eot?#iefix) format('embedded-opentype'),
     url(../fonts/NEXONLv1GothicLowOTFBold.woff) format('woff'),
     url(../fonts/NEXONLv1GothicLowOTFBold.ttf) format('truetype');
-}
+} */
 
 /* 반응형, 모바일에서 모든요소의 패딩,선을 크기안에 포함시킴 */
 *, ::before, ::after {
@@ -15,11 +15,11 @@
 
 /* 컬러 변수 */
 :root {
-  --point--color1: #07f;
+  --point--color1: #bb0841;
   --point--color2: #2be283;
-  --txt-color-400: #9fa1a7;
-  --txt-color-500: #4a4e57;
-  --txt-color-600: #17191d;
+  --txt-color-400: #777;
+  --txt-color-500: #555;
+  --txt-color-600: #000;
 }
 
 /* rem단위사용시 주석풀고 사용 (24.03.14 16:53) */
@@ -129,12 +129,11 @@ body {
 /* body.on { overflow: hidden; position: fixed; left:0; top:0; width:100%; } */
 
 body, input, select, textarea, button, table {
-  /* font-family: 'Pretendard', '맑은 고딕', 'malgun gothic', 'Apple SD Gothic Neo', sans-serif; */
-  font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", helvetica, "Apple SD Gothic Neo", sans-serif;
+  font-family: 'Noto Sans KR', '맑은 고딕', 'malgun gothic', 'Apple SD Gothic Neo', sans-serif;
   /* 반응형 때 rem으로 변경 (24.03.14 16:54) */
   /* 24.03.27 11:45 rem으로 변경 */
   /* 24.03.27 12:51 px로 변경 */
-  font-size: 12px; 
+  font-size: 16px; 
   color: var(--txt-color-500);
 }
 
