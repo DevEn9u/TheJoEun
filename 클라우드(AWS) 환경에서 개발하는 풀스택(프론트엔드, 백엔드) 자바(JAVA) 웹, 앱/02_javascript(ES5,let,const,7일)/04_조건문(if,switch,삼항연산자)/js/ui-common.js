@@ -1,5 +1,5 @@
 /**
- * quiz
+ * quiz 1
  * prompt함수로 나이를 입력받아 19살이상이면 '성인'를 콘솔로 출력하고
 19살미만이면 '미성년자'를 콘솔에 출력하시오(if)
 */
@@ -45,14 +45,14 @@ console.log('-----------------------');
   * 나이를 입력받아 10대(10살 미만도 포함), 20대, 30대 이상으로 출력하시오.
   */
 
-//  let age = prompt('나이를 입력하세요.')
-//  if (age >= 30) {
-//   console.log('30대 이상입니다.');
-//  } else if (age >= 20 && age < 30) {
-//   console.log('20대입니다');
-//  } else {
-//   console.log('10대입니다.');
-//  } 
+ let age = prompt('나이를 입력하세요.')
+ if (age >= 30) {
+  console.log('30대 이상입니다.');
+ } else if (age >= 20 && age < 30) {
+  console.log('20대입니다');
+ } else {
+  console.log('10대입니다.');
+ } 
 
 /**
  * 논리연산자
@@ -94,24 +94,23 @@ if (test) {
  * 중첩if문 이용 
  */
 
-let userId = 'james';
-let password = '1234';
+let UserId = 'james'
+let password = '1234'
 
 if (userId == 'james') {
   console.log('Id를 확인하였습니다.');
   if (password == '1234') {
     console.log('로그인에 성공하였습니다.');
-  }
-  else {
+  } else {
     console.log('비밀번호를 확인하세요.');
   }
 } else {
-  console.log('잘못된 id를 입력하셨습니다.')
+  console.log('Id를 확인하세요.');
 }
 
 /**
  * 일치연산자
- * ===(값과 자료형이 모두 일치한지 비교)
+ * ===(값과 자료형이 모두 일치하는지 비교)
  * !==(값과 자료형이 모두 다른지 비교)
  * 조건문에서는 동등연산자 '=='를 쓰지 않고 무조선 일치연산자 사용
  */
@@ -137,9 +136,9 @@ if (11 !== '11') {
  * 추가조건: 빈칸일경우 혈액형을 대문자로 입력하세요를 alert으로 띄우기
  */
 // trim(): 입력된 값의 전후 공백을 제거해줌
-// toUppperCase: 문자열을 대문자로 변경해줌
+// toUppperCase(): 문자열을 대문자로 변경해줌
 // 다중의 메서드를 연결지어 호출 가능: Method Chaining
-// toLowerCase: 문자열을 소문자로 변경해줌
+// toLowerCase(): 문자열을 소문자로 변경해줌
 
 // let bloodType = prompt('혈액형을 입력하세요.')
 // bloodType = bloodType.trim().toUpperCase(); 
@@ -166,7 +165,7 @@ if (11 !== '11') {
 //   console.log('우수');
 // } else if (score >= 70 && score < 80) {
 //   console.log('우수');
-// } else if (score >= 60 && scoer < 70) {
+// } else if (score >= 60 && score < 70) {
 //   console.log('미흡');
 // } else {
 //   console.log('매우 미흡');
