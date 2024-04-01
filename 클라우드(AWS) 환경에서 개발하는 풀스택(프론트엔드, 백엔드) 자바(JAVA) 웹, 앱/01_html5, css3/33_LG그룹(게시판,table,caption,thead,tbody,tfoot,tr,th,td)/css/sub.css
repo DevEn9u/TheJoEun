@@ -60,7 +60,8 @@
   max-width: 1200px;
   margin: 0 auto;
   border: 1px solid red;
-  height: 800px;
+  height: 900px;
+  position: relative;
 }
 
 /* IR정보 페이지 */
