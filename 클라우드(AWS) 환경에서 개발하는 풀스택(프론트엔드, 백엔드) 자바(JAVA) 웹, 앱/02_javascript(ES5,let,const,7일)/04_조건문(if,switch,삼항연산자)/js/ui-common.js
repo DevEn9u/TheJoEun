@@ -195,7 +195,7 @@ if (11 !== '11') {
  * 조건1: 공백문자나 빈칸일 경우 실행하지않기(if)
  * 조건2: 일반문자일 경우 숫자를 입력하세요 출력하기(default)
  */
-// let quizNum = prompt('숫자를 입력하세요.');
+let quizNum = prompt('숫자를 입력하세요.');
 /** 
  * quizNum이 빈칸이 아니면 실행
 if (quizNum !== '') {
