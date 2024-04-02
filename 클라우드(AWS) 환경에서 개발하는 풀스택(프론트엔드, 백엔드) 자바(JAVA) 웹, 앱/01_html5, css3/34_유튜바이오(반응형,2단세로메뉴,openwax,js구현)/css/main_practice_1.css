@@ -1,0 +1,64 @@
+:root {
+  --point--color1: #00a651;
+  --point--color2: #8bc63f;
+  --point--color3: #76CA9E;
+  --txt-color-400: #666;
+  --txt-color-500: #222;
+  --txt-color-600: #000;
+}
+
+.inner {
+  width: 1400px;
+}
+.main_slider {
+  height: 980px;
+  text-align: center;
+  background: linear-gradient(90deg, #71AEE8, #77E9CE);
+  position: relative;
+  overflow: hidden;
+}
+.main_slider .pc_img {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  max-width: none;
+}
+.main_slider .m_img {
+  display: none;
+}
+
+
+/* 메인 슬라이더 분기점 */
+@media (max-width: 1440px) {
+  .main_slider {
+    height: 700px;
+  }
+  .main_slider .pc_img {
+    height: 108%;
+  }
+}
+
+
+/* 태블릿 분기점 */
+@media (max-width: 1200px) {
+  .main_slider {
+    padding-top: 56.25%;
+    height: 0;
+  }
+}
+
+/* 모바일 분기점 */
+@media (max-width: 767px) {
+  .main_slider {
+    padding-top: 0;
+    border: 1px solid red;
+    height: auto;
+  }
+  .main_slider .pc_img {
+    display: none;
+  }
+  .main_slider .m_img {
+    display: block;
+  }
+}

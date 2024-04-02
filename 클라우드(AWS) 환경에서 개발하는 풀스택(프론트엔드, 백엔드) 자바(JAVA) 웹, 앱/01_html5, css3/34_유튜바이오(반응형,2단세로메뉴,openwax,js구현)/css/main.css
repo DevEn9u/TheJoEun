@@ -1,0 +1,148 @@
+:root {
+  --point--color1: #00a651;
+  --point--color2: #8bc63f;
+  --point--color3: #76CA9E;
+  --txt-color-400: #666;
+  --txt-color-500: #222;
+  --txt-color-600: #000;
+}
+#wrap {
+  /* 스크롤을 위해 설정, 나중에 지움 */
+  height: 1500px;
+}
+#header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+}
+#header .inner {
+  /* 원본 페이지에서 width 1400px인 것을 확인 */
+  width: 1400px;
+  height: 100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  border: 2px solid red;
+}
+#header .logo {
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  /* width는 밖에서 height는 안에서 적용 */
+  width: 115px;
+}
+#header .logo a {
+  display: block;
+  height: 52px;
+  -webkit-mask: url(../images/logo.svg) no-repeat left top / 100%;
+  mask: url(../images/logo.svg) no-repeat left top / 100%;
+  background: #fff;
+}
+
+/* gnb  */
+#header .gnb {
+  display: flex;
+}
+#header .gnb>li {
+  position: relative;
+}
+#header .gnb>li>a {
+  display: block;
+  /* 원본 페이지에서 늘려놨음 */
+  line-height: 100px;
+  padding: 0 50px;
+  color: #fff;
+  font-weight: 500;
+}
+
+#header .gnb>li:hover .depth2 {
+  max-height: 240px;
+  padding: 20px 0;
+}
+#header .gnb .depth2 {
+  position: absolute;
+  left: 0;
+  top: 100px;
+  background: #50b779;
+  text-align: center;
+  border-radius: 0 30px 30px 30px;
+  /* 띄우는 속성을 적용해 크기가 줄어들었으므로 100% 설정 */
+  width: 100%;
+  transition: all 0.5s;
+  max-height: 0;
+  overflow: hidden;
+}
+#header .gnb .depth2 li + li {
+  margin-top: 15px;
+}
+#header .gnb .depth2 a {
+  display: block;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.main_slider {
+  /* 안에 배경 이미지가 1920 x 980임, 높이 지정안하면 내용이 없기때문에 높이가 0이됨 */
+  height: 980px;
+  /* img 태그는 inline태그기 때문에 text-align: center로 가운데 정렬 가능 */
+  text-align: center;
+  background: linear-gradient(90deg, #71AEE8, #77E9CE);
+  position: relative;
+  overflow: hidden;
+}
+.main_slider .pc_img {
+  /* 원본 페이지의경우 페이지를 줄이면 이미지가 밖으로 나가야하기 때문에 띄워야함 */
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  /* common.css에서 img의 max-width를 100%로 초기화해놓았음 */
+  max-width: none;
+}
+.main_slider .m_img {
+  display: none;
+}
+
+
+/* .main_slider 분기점 */
+@media (max-width: 1440px) {
+  .main_slider {
+    height: 700px;
+  }
+  .main_slider .pc_img {
+    height: 108%;
+  }
+}
+
+
+/* 태블릿 분기점 */
+@media (max-width: 1200px) {
+  .main_slider {
+    /* 16:9 비율일때 56.25% */
+    padding-top: 56.25%;
+    /* 원본 페이지에 맞게 0으로 바꿈 */
+    height: 0;
+  }
+}
+
+
+/* 모바일 분기점 */
+@media (max-width: 767px) {
+  .main_slider {
+    border: 5px solid red;
+    padding-top: 0;
+    /* width, height의 default: auto */
+    height: auto;
+  }
+  .main_slider .pc_img {
+    display: none;
+  }
+  .main_slider .m_img {
+    display: block;
+  }
+}
