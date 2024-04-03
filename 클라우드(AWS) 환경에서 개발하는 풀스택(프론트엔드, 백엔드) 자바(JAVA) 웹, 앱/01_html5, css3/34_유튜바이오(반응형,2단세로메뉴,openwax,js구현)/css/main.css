@@ -16,16 +16,43 @@
   top: 0;
   width: 100%;
   z-index: 9999;
+  /* fixed를 scroll할 때 색 변경이 transition 있음 */
+  transition: all 0.2s;
 }
+/* fixed를 js로 control */
+#header.fixed {
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+#header.fixed .logo a {
+  background:url(../images/logo.svg) no-repeat left top / 100%;
+}
+#header.fixed .gnb>li>a {
+  color: var(--txt-color-600)
+}
+#header.fixed .lang_wrap .lang_btn {
+  background: #f7f7f7;
+  color: var(--txt-color-600);
+  border-color: #f7f7f7;
+}
+#header.fixed .lang_wrap .lang_btn::after {
+  background: #000;
+}
+
+#header.fixed .open_btn {
+  background: #7fd1a6;
+  border: none;
+}
+
 #header .inner {
   /* 원본 페이지에서 width 1400px인 것을 확인 */
-  width: 1400px;
+  max-width: 1400px;
   height: 100px;
   margin: 0 auto;
   display: flex;
   justify-content: center;
   position: relative;
-  border: 2px solid red;
+  /* border: 2px solid red; */
 }
 #header .logo {
   position: absolute;
@@ -58,7 +85,9 @@
   color: #fff;
   font-weight: 500;
 }
-
+/* drop-down 동작 방식을 사용할 때 각 ul의 높이가 다르기 때문에 제일 높은 ul의 height를 max-height로 지정 
+이 때 li가 별로 없어 hieght가 작은 ul은 animation이 조금 느려보임
+*/
 #header .gnb>li:hover .depth2 {
   max-height: 240px;
   padding: 20px 0;
@@ -72,7 +101,7 @@
   border-radius: 0 30px 30px 30px;
   /* 띄우는 속성을 적용해 크기가 줄어들었으므로 100% 설정 */
   width: 100%;
-  transition: all 0.5s;
+  transition: all 0.2s;
   max-height: 0;
   overflow: hidden;
 }
@@ -84,6 +113,95 @@
   color: #fff;
   font-size: 16px;
   font-weight: 500;
+}
+
+#header .lang_wrap {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+/* on은 hover 역할을 하게할 것인데 js로 control하기 위해 설정 */
+#header .lang_wrap.on .lang_btn {
+  background: #f7f7f7;
+  color: var(--txt-color-600);
+  border-radius: 17px 17px 0 0;
+  border-color: #f7f7f7;
+}
+#header .lang_wrap.on .lang_btn::after {
+  transform: rotate(180deg);
+  background: #000;
+}
+#header .lang_wrap.on .lang{
+  max-height: 80px;
+}
+#header .lang_wrap .lang_btn {
+  height: 34px;
+  width: 82px;
+  border: 1px solid white;
+  border-radius: 17px;
+  text-align: left;
+  padding: 0 16px;
+  background: none;
+  color: #fff;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 0 7px;
+  transition: all 0.2s;
+}
+#header .lang_wrap .lang_btn::after {
+  content: '';
+  display: inline-block;
+  width: 7px;
+  height: 6px;
+  -webkit-mask: url(../images/arrow_down.svg) no-repeat;
+  mask: url(../images/arrow_down.svg) no-repeat;
+  background: #fff; 
+  transition: all 0.2s;
+}
+#header .lang_wrap .lang {
+  position: absolute;
+  left: 0;
+  top: 34px;
+  background: #f7f7f7;
+  width: 100%;
+  border-radius: 0 0 17px 17px;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.2s;
+}
+#header .lang_wrap .lang a {
+  display: block;
+  font-size: 16px;
+  color: var(--txt-color-400);
+  padding: 0 16px;
+  line-height: 40px;
+}
+#header .open_btn {
+  display: none;
+}
+
+/* 모바일 사이드 메뉴 */
+#header .m_gnb_wrap {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  padding-top: 70px;
+}
+#header .m_gnb>li>a {
+  display: block;
+  line-height: 60px;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 0 15px;
+}
+#header .m_gnb>li>a::after {
+  content: '';
+  
 }
 
 .main_slider {
@@ -122,6 +240,60 @@
 
 /* 태블릿 분기점 */
 @media (max-width: 1200px) {
+  #header .inner {
+    height: 80px;
+  }
+  #header .logo {
+    width: 100px;
+  }
+  #header .logo a {
+    height: 45px;
+  }
+  #header .gnb {
+    display: none;
+  }
+
+  #header .lang_wrap {
+    z-index: 10;
+    border: 2px solid red;
+  }
+
+  
+  #header .open_btn {
+    width: 34px;
+    height: 34px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    background: none;
+    /* inline block 사이에는 자간에 의해 4px 간격이 있음 */
+    margin-left: 16px;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3px 0;
+  }
+  #header .open_btn i {
+    width: 14px;
+    height: 2px;
+    background: #fff;
+    border-radius: 2px;
+    transition: all 0.2s;
+  }
+  #header .open_btn.on {
+    background: #7fd1a6;
+    border: none;
+  }
+  #header .open_btn.on i:nth-of-type(1) {
+    transform: translate(0px, 5px) rotate(135deg);
+  }
+  #header .open_btn.on i:nth-of-type(2) {
+    transform: scaleX(0);
+  }
+  #header .open_btn.on i:nth-of-type(3) {
+    transform: translate(0px, -5px)rotate(-135deg);
+  }
+
   .main_slider {
     /* 16:9 비율일때 56.25% */
     padding-top: 56.25%;
@@ -133,8 +305,47 @@
 
 /* 모바일 분기점 */
 @media (max-width: 767px) {
+  #header .inner {
+    height: 50px;
+  }
+  #header .logo {
+    left: 15px;
+    width: 60px;
+  }
+  #header .logo a {
+    height: 28px;
+  }
+
+  #header .lang_wrap {
+    right: 15px;
+  }
+  #header .lang_wrap .lang_btn {
+    height: 24px;
+    font-size: 13px;
+    width: 61px;
+    padding: 0 10px;
+  }
+  #header .lang_wrap.on .lang_btn {
+    border-radius: 10px 10px 0 0;
+  }
+  #header .lang_wrap .lang {
+    width: 61px;
+    top: 24px;
+    border-radius: 0 0 10px 10px;
+  }
+  #header .lang_wrap .lang a {
+    padding: 0 10px;
+    font-size: 13px;
+    line-height: 30px;
+  }
+
+  #header .open_btn {
+    width: 24px;
+    height: 24px;
+  }
+
   .main_slider {
-    border: 5px solid red;
+    /* border: 5px solid red; */
     padding-top: 0;
     /* width, height의 default: auto */
     height: auto;
