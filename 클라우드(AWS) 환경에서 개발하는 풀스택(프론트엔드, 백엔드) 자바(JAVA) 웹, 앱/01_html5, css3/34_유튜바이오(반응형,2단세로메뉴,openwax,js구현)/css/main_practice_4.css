@@ -186,6 +186,7 @@
   display: none;
 }
 
+/* .main_slider */
 .main_slider {
   /* 안에 배경 이미지가 1920 x 980임, 높이 지정안하면 내용이 없기때문에 높이가 0이됨 */
   height: 980px;
@@ -258,12 +259,12 @@
   padding: 0 20px;
   margin: 0 auto;
   display: flex;
-  gap: 0px 120px;
-  /* border: 1px solid red; */
+  gap: 0 120px;
 }
 .main_business .col {
   width: 50%;
 }
+
 .main_business .tit_wrap {
   margin-bottom: 190px;
 }
@@ -275,19 +276,19 @@
 }
 .main_business .tit_wrap p {
   font-size: 20px;
-  color: var(--txt-color-500);
+  color: var(--txt-color-400);
 }
 
 .main_business .business {
   border-radius: 40px;
-  text-align: center;
   border: 1px solid #ddd;
   background: linear-gradient(#f8f8f8ff, #f8f8f800);
+  text-align: center;
 }
 .main_business .business a {
+  display: block;
   height: 610px;
   padding: 50px 20px 0;
-  display: block;
 }
 .main_business .business .txt_wrap {
   text-align: left;
@@ -295,19 +296,20 @@
 }
 .main_business .business .txt_wrap h3 {
   font-size: 32px;
-  color: var(--point--color1);
   font-weight: 700;
+  color: var(--point--color1);
 }
 .main_business .business .txt_wrap em {
   display: block;
   font-size: 20px;
-  color: var(--point--color2);
   font-weight: 500;
+  color: var(--point--color2);
   margin: 10px 0 20px;
 }
 .main_business .business .txt_wrap p {
   color: #666;
 }
+
 .main_business .col:nth-child(2) .business + .business {
   margin-top: 80px;
 }
@@ -485,6 +487,7 @@
     background: #999;
     border-radius: 50%;
   }
+
   .main_slider {
     /* 16:9 비율일때 56.25% */
     padding-top: 56.25%;
@@ -496,12 +499,14 @@
     display: none;
   }
 
+ /* 태블릿 .maiin_business */
   .main_business {
     padding: 100px 0;
   }
   .main_business .inner {
     gap: 0 30px;
   }
+
   .main_business .tit_wrap {
     margin-bottom: 130px;
   }
@@ -521,16 +526,15 @@
   }
   .main_business .business .txt_wrap em {
     font-size: 18px;
-    margin: 10px 0 15px;
+    margin-bottom: 15px;
   }
   .main_business .business .txt_wrap p {
     font-size: 16px;
   }
   .main_business .point1_btn {
-    margin-top: 70px;
     font-size: 16px;
+    margin-top: 70px;
   }
-
 }
 
 
@@ -588,19 +592,19 @@
     display: block;
   }
 
-  /* 모바일 .main_business */
+/* 모바일 .main_business */
   .main_business {
     padding: 80px 0;
   }
   .main_business .inner {
-    padding: 0 15px 120px;
     flex-wrap: wrap;
-    /* point1_btn의 기준 */
+    padding: 0 15px 120px;
     position: relative;
   }
   .main_business .col {
     width: 100%;
   }
+
   .main_business .tit_wrap {
     margin-bottom: 30px;
   }
@@ -624,16 +628,15 @@
   .main_business .business .txt_wrap p {
     font-size: 14px;
   }
-
   .main_business .col:nth-child(2) .business + .business {
     margin-top: 30px;
   }
-
   .main_business .point1_btn {
     position: absolute;
     left: 15px;
     bottom: 0;
-    line-height: 50px;
     font-size: 15px;
+    line-height: 50px;
   }
+
 }

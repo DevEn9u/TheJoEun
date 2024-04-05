@@ -32,28 +32,24 @@ window.addEventListener('DOMContentLoaded', function() {
   });
 
   // 모바일 사이드 메뉴(아코디언 메뉴 형식)
-  // 그룹 요소(여러개의 같은 태그로 된 elements)는 querySelectorAll 사용하며 배열로 return됨 
-  // 배열 method를 사용하려고 보니 코드가 너무 길어져 변수 선언하여 담음
   const mGnb = document.querySelectorAll('#header .m_gnb>li>a');
-  // js에서 형제 요소를 선택하는 방법
+  // js에서 형제 요소를 선택하는 키워드가 없어서 함수를 만들어서 해결
   function siblings(t) {
-    // 타겟 요소(t)의 부모의 모든 자식요소 선택
+    // 모든 타겟 요소(t)의 부모 요소(parentElement property의 모든 자식요소 선택(children property) return을 유사배열로 함
     const children = t.parentElement.children;
     const tempArr = [];
-    
+   
     // children은 htmlCollection 유사배열이므로 forEach()는 사용 불가하고 for문 사용해야함 => 유사배열을 tempArr로 배열로 만드려고 함
     for (let i = 0; i < children.length; i++) {
       tempArr.push(children[i]);
     }
-  
     // filter()는 주어진 함수를 만족하는 모든 요소를 모아 새배열로 반환, 여기서는 유사배열을 모아 배열로 만든 tempArr에 들어온 filter를 적용, 임시배열 안의 형제 요소중 타겟요소와 같지 않은 요소들을 retrun받아 새로운 배열을 return
     return tempArr.filter(v => {
       return v !== t;
     });
   }
   
-  // a들을 배열로 만들어 반복문을 통해 연결, v =  a (33번째 줄 변수 mGnb)
-  // e는 event 객체
+  // a들을 배열로 만들어 반복문으로 연결, v = a
   mGnb.forEach((v) => {
     v.addEventListener('click', function(e) {
       // event 객체의 기본값을 제한, a 태그의 href="#"는 위로 위동이 기본 이벤트
@@ -66,21 +62,7 @@ window.addEventListener('DOMContentLoaded', function() {
       })
     });
   });
-  
-  // main_slider scroll down
-  // 클릭시 요소의 문서에서의 위치만큼 스크롤 해야함
-  document
-  .querySelector('.main_slider .scroll_down')
-  .addEventListener('click', function(e) {
-    e.preventDefault();
-    // offsetTop은 문서의 위치값 구하는 프로퍼티, .main_business의 위치값을 받아 변수 posY에 할당
-    let posY = document.querySelector('.main_business').offsetTop;
 
-    window.scrollTo({
-      top: posY,
-      behavior: 'smooth',
-    })
-  })
 })
 
 
