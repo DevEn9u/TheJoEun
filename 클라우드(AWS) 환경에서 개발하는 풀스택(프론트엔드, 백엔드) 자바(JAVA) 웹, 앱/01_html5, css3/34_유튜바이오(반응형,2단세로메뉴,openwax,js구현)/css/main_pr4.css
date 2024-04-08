@@ -326,10 +326,10 @@
   background: #f8f8f8;
 }
 .main_info .inner {
-  max-width: 1440px;
+  width: 1440px;
   padding: 0 20px;
   margin: 0 auto;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 .main_info h2 {
   font-size: 44px;
@@ -337,16 +337,17 @@
   font-weight: 700;
   margin-bottom: 40px;
 }
+
 .main_info .row {
   display: flex;
   gap: 0 80px;
 }
 .main_info .row .info_left {
   width: calc(100% - 400px);
-  background: url(../images/bg_mc02_01.jpg) no-repeat 50% 50% / cover;
-  padding: 70px 100px 50px;
-  color: #fff;
+  background: url(../images/bg_mc02_01.jpg) no-repeat 100% 100% / cover;
   border-radius: 40px;
+  padding: 70px 100px 50px;
+  color: #Fff;
 }
 .main_info .info_left .top {
   display: flex;
@@ -374,13 +375,11 @@
   display: flex;
   justify-content: space-between;
   margin-top: 50px;
-  align-items: center;
 }
 .main_info .info_left .bottom p {
   font-size: 16px;
   font-weight: 500;
 }
-
 .main_info .info_right {
   width: 320px;
 }
@@ -389,7 +388,7 @@
   height: 300px;
   padding: 40px;
   border-radius: 40px;
-  background: linear-gradient(45deg, #008A43, #64DE9F);
+  background: linear-gradient(45deg, #008A43, #64DE9F); 
   position: relative;
 }
 .main_info .info_right a::after {
@@ -406,7 +405,6 @@
   font-weight: 700;
   color: #fff;
   position: relative;
-  /* after에서 bottom으로 조절하지 않고 부모요소에서 pdding을 이용하는 이유는 다른 요소가 있을 경우 겹치기 때문에 안전하게 밀기 위해서임 */
   padding-bottom: 40px;
 }
 .main_info .info_right a h3::after {

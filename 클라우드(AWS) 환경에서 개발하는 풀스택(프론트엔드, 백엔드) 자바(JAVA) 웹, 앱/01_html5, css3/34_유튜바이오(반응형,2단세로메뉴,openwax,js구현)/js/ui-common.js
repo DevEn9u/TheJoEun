@@ -75,13 +75,21 @@ window.addEventListener('DOMContentLoaded', function() {
     e.preventDefault();
     // offsetTop은 문서의 위치값 구하는 프로퍼티, .main_business의 위치값을 받아 변수 posY에 할당
     let posY = document.querySelector('.main_business').offsetTop;
-
+    
     window.scrollTo({
       top: posY,
       behavior: 'smooth',
-    })
-  })
-})
+    });
+  });
+  
+  
+  // AOS 초기화
+  AOS.init({
+    duration: 1000,
+    // 한번만 실행
+    // once: true,
+  });
+});
 
 
 /** header fixed에서

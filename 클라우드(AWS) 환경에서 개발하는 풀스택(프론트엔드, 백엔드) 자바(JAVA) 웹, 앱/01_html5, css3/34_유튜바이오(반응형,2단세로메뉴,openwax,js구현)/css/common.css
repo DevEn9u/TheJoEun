@@ -496,6 +496,23 @@ textarea {
   margin-left: 10px;
 }
 
+.point2_btn {
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+  border: 1px solid #fff;
+  width: 130px;
+  line-height: 40px;
+  border-radius: 20px;
+}
+.point2_btn::after {
+  content: '';
+  width: 20px;
+  height: 10px;
+  background: url(../images/arrow_more.svg) no-repeat left top / 100%;
+  margin-left: 20px;
+}
+
 /* 라벨 버튼 */
 [class*='label_btn'] {
   display: inline-flex;

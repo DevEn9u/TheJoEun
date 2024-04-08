@@ -19,9 +19,11 @@
   <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet"> -->
+  <link rel="stylesheet" href="css/aos.css">
   <!-- 타임스탬프 코드로 캐싱 방지 -->
   <link rel="stylesheet" href="css/common.css?v=<?php echo time(); ?>">
   <link rel="stylesheet" href="css/main.css?v=<?php echo time(); ?>">
+  <script src="js/aos.js"></script>
   <script src="js/ui-common.js?v=<?php echo time(); ?>"></script>
 </head>
 <body>
@@ -160,12 +162,12 @@
       <section class="main_business">
         <div class="inner">
           <div class="col">
-            <div class="tit_wrap">
+            <div class="tit_wrap" data-aos="fade-up">
               <h2>Business</h2>
               <p>우리는 맞춤형 헬스케어로 모두의 건강한 삶을 당연하게 만듭니다.<br>
                 We offer uniquely designed healthcare for each individual</p>
             </div>
-            <div class="business_wrap">
+            <div class="business_wrap" data-aos="fade-up">
               <div class="business">
                 <a href="#">
                   <img src="images/img_mc01_01.svg" alt="IT Service">
@@ -176,11 +178,11 @@
                   </div>
                 </a>
               </div>
-              <a href="#" class="point1_btn btn">사업분야 더보기</a>
+              <a href="#" class="point1_btn btn pc_more_btn">사업분야 더보기</a>
             </div>
           </div>
           <div class="col">
-            <div class="business">
+            <div class="business "data-aos="fade-up">
               <a href="#">
                 <img src="images/img_mc01_02.svg" alt="검체검사 서비스">
                 <div class="txt_wrap">
@@ -190,7 +192,7 @@
                 </div>
               </a>
             </div>
-            <div class="business">
+            <div class="business" data-aos="fade-up">
               <a href="#">
                 <img src="images/img_mc01_03.svg" alt="BT Service">
                 <div class="txt_wrap">
@@ -199,6 +201,34 @@
                   <p>U2Bio의 Bio-Technology 서비스 핵심 기술은 유전체 분석 기술입니다.</p>
                 </div>
               </a>
+            </div>
+            <a href="#" class="point1_btn btn m_more_btn" data-aos="fade-up">사업분야 더보기</a>
+          </div>
+        </div>
+      </section>
+      <section class="main_info">
+        <div class="inner">
+          <div class="info">
+            <h2>주식정보</h2>
+            <div class="row">
+              <div class="info_left">
+                <div class="top">
+                  <h3>유투바이오</h3>
+                  <div class="num">
+                    <strong>4,290</strong>
+                    <span>50(1.18%)</span>
+                  </div>
+                </div>
+                <div class="bottom">
+                  <p>KRX 2024.04.07 기준</p>
+                  <a href="#" class="btn point2_btn">더보기</a>
+                </div>
+              </div>
+              <div class="info_right">
+                <a href="#">
+                  <h3>기업 공시 확인하기</h3>
+                </a>
+              </div>
             </div>
           </div>
         </div>
