@@ -341,7 +341,7 @@
   display: flex;
   gap: 0 80px;
 }
-.main_info .row .info_left {
+.main_info .info_left {
   width: calc(100% - 400px);
   background: url(../images/bg_mc02_01.jpg) no-repeat 50% 50% / cover;
   padding: 70px 100px 50px;
@@ -399,9 +399,9 @@
   bottom: 40px;
   width: 110px;
   height: 120px;
-  background: url(../images/bg_mc02_02.png) no-repeat;
+  background: url(../images/bg_mc02_02.png) no-repeat 0 0 / 100%;
 }
-.main_info .info_right a h3 {
+.main_info .info_right h3 {
   font-size: 28px;
   font-weight: 700;
   color: #fff;
@@ -409,14 +409,65 @@
   /* after에서 bottom으로 조절하지 않고 부모요소에서 pdding을 이용하는 이유는 다른 요소가 있을 경우 겹치기 때문에 안전하게 밀기 위해서임 */
   padding-bottom: 40px;
 }
-.main_info .info_right a h3::after {
+.main_info .info_right h3::after {
   content: '';
   position: absolute;
   left: 0;
   bottom: 0;
   width: 40px;
   height: 20px;
-  background: url(../images/arrow_more.svg);
+  background: url(../images/arrow_more.svg) 0 0 / 100%;
+}
+/* news */
+.main_info .news_wrap {
+  position: relative;
+  margin-top: 105px;
+}
+.main_info .news {
+  display: flex;
+  gap: 0 30px;
+  margin-top: 40px;
+}
+.main_info .news li {
+  width: calc(100% / 4);
+
+}
+.main_info .news a {
+  display: block;
+  border: #ddd 1px solid;
+  border-radius: 20px;
+  padding: 32px;
+  background: #fff;
+}
+.main_info .news .txt {
+  font-size: 20px;
+  color: var(--txt-color-500);
+  font-weight: 600;
+  line-height: 1.6;
+  overflow: hidden;
+  margin-bottom: 20px;
+  display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	overflow: hidden;
+  transition: all 0.2s;
+}
+.main_info .news .txt:hover {
+  color: var(--point--color1);
+}
+.main_info .news span {
+  font-size: 16px;
+  color: #999; 
+}
+.main_info .news_wrap .more_btn {
+  position: absolute;
+  right: 0;
+  top: 5px;
+  width: 50px;
+  height: 50px;
+  background: #fff url(../images/arrow_more2.svg) no-repeat 50% 50%;
+  border-radius: 50%;
+  box-shadow: rgba(0,0,0,.08) 0 3px 16px;
 }
 
 /* .main_slider 분기점 */
@@ -631,7 +682,69 @@
     margin-top: 70px;
     font-size: 16px;
   }
+/* 태블릿 .main_info */
+  .main_info {
+    padding: 100px 0;
+  }
+  .main_info h2 {
+    font-size: 38px;
+    margin-bottom: 30px;
+  }
+  .main_info .row {
+    flex-wrap: wrap;
+    gap: 40px 0;
+  }
+  .main_info .info_left {
+    width: 100%;
+    padding: 25px 40px 35px;
+  }
+  .main_info .info_left .top h3 {
+    font-size: 26px;
+  }
+  .main_info .info_left .top .num strong {
+    font-size: 50px;
+  }
+  .main_info .info_left .bottom {
+    margin-top: 40px;
+  }
+  .main_info .info_left .poin2_btn {
+    font-size: 16px;
+  }
 
+  .main_info .info_right {
+    width: 100%;
+  }
+  .main_info .info_right a {
+    height: auto;
+  }
+  .main_info .info_right h3 {
+    font-size: 24px;
+    padding-bottom: 54px;
+  }
+  .main_info .info_right a::after {
+    top: 50%;
+    transform: translateY(-50%);
+    width: 90px;
+    height: 100px;
+  }
+
+  /* 태블릿 news */
+  .main_info .news {
+    flex-wrap: wrap;
+    gap: 15px 10px;
+  }
+  .main_info .news li {
+    width: calc(50% - 5px);
+  }
+  .main_info .news a {
+    padding: 25px;
+  }
+  .main_info .news .txt {
+    font-size: 18px;
+  }
+  .main_info .news .txt:hover {
+    color: var(--txt-color-500);
+  }
 }
 
 
@@ -741,4 +854,88 @@
     /* common.css에서 .btn을 inline-flex로 설정했기 떄문에 block이 아님 */
     display: inline-flex;
   }
+  /* 모바일 .main_info  */
+  .main_info {
+    padding: 80px 0;
+  }
+  .main_info .inner {
+    padding: 0 15px;
+  }
+  .main_info h2 {
+    font-size: 33px;
+  }
+  .main_info .row {
+    gap: 20px 0;
+  }
+  .main_info .info_left {
+    border-radius: 20px;
+    padding: 20px;
+  }
+  .main_info .info_left .top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .main_info .info_left .top h3 {
+    font-size: 20px;
+  }
+  .main_info .info_left .top .num strong {
+    font-size: 40px;
+  }
+  .main_info .info_left .top .num span {
+    font-size: 15px;
+  }
+  .main_info .info_left .bottom p {
+    font-size: 13px;
+  }
+  .main_info .info_left .point2_btn {
+    width: 100px;
+    line-height: 30px;
+    font-size: 11px;
+    padding: 0 10px;
+    justify-content: space-between;
+  }
+  .main_info .info_left .point2_btn::after {
+    margin-left: 15px;
+    width: 10px;
+    height: 5px;
+  }
+  .main_info .info_right a {
+    border-radius: 20px;
+    padding: 20px;
+    height: 200px;
+  }
+  .main_info .info_right a::after {
+    right: 20px;
+    top: auto;
+    bottom: 30px;
+    transform: translateY(0);
+  }
+  .main_info .info_right h3 {
+    font-size: 20px;
+    padding-bottom: 40px;
+  }
+  .main_info .info_right h3::after {
+    width: 30px;
+    height: 15px;
+  }
+
+  /* 모바일 news */
+  .main_info .news {
+    gap: 14px;
+  }
+  .main_info .news li {
+    width: calc(50% - 10px);
+  }
+  .main_info .news a {
+    padding: 30px 15px;
+    border-radius: 10px;
+    line-height: 1.4;
+  }
+  .main_info .news .txt {
+    font-size: 14px;
+  }
+  .main_info .news span {
+    font-size: 11px;
+  }
+
 }
