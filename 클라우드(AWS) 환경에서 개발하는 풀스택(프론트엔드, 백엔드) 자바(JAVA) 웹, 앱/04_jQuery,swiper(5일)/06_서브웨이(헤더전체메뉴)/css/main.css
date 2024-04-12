@@ -18,12 +18,11 @@
   left: 0;
   top: 0;
   width: 100%;
-  height: 170px;
   border-top: 5px solid var(--point--color2);
   z-index: 9999;
   background: #fff;
 }
-#header::after {
+#header::before {
   content: '';
   position: absolute;
   left: 0;
@@ -83,6 +82,78 @@
   background: url(../images/icon_utill_global.png);
 }
 
+/* header_bottom */
+#header .header_bottom {
+  display: flex;
+  justify-content: center;
+}
+#header .gnb {
+  display: flex;
+}
+#header .gnb>li {
+  position: relative;
+  /* 간격이 같으면 padding, 다르면 width로 조정 */
+  width: 165px;
+}
+#header .gnb>li>a {
+  display: block;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--txt-color-600);
+  line-height: 67px;
+}
+
+#header.on .gnb .depth2 {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.5s;
+}
+#header .gnb .depth2 {
+  /* 닫힐 때는 빨리  */
+  transition: all 0.2s;
+  position: absolute;
+  left: 0;
+  top: 67px;
+  /* border: 1px solid red; */
+  width: 100%;
+  z-index: 10;
+  text-align: center;
+  padding-top: 20px;
+  transform: translateY(-20px);
+  opacity: 0;
+  /* 항목이 적은 depth2에서 마우스를 내리면 after가 사라지는 것을, after의 높이 260px과 같게 지정하여 막음 */
+  height: 260px;
+  visibility: hidden;
+}
+#header .gnb .depth2 li + li {
+  margin-top: 10px;
+}
+#header .gnb .depth2 a {
+  font-size: 15px;
+  letter-spacing: -0.05em;
+}
+#header .gnb .depth2 a:hover {
+  color: var(--point--color2);
+  text-decoration: underline;
+}
+#header::after {
+  content: '';
+  position: absolute;
+  top: 165px;
+  left: 0;
+  width: 100%;
+  height: 0;
+  transition: all 0.3s;
+  background: #fff;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+#header.on::after {
+  height: 260px;
+}
+
+/* main */
 #container {
   padding-top: 170px;
 }
