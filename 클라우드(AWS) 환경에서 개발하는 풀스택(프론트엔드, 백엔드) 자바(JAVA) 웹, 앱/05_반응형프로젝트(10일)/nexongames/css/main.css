@@ -26,7 +26,7 @@
   width: 100%;
   height: 300px;
   border-bottom: 1px solid #eee;
-  display: none;
+  /* display: none; */
 }
 
 #header .inner {
@@ -136,12 +136,28 @@
 
 /* main */
 #container {
-  padding-top: 70px;
+  /* padding-top: 70px; */
 }
 /* main_video 메인 비디오 */
+
+.main_video .swiper_wrapper {
+  /* width: 100vh; */
+}
+.main_video .swiper-slide {
+  height: 672px;
+  width: 100vh;
+  height: 100%;
+
+}
 .main_video video {
   width: 100%;
+  height: 100%;
   object-fit: cover;
+}
+.main_slider .btn_wrap .swiper-pagination {
+  position: static;
+  /* width:100%가 기본으로 적용되어 있어 auto로 풀어줌 */
+  width: auto;
 }
 
 /* 태블릿 분기점 */
