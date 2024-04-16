@@ -1,15 +1,15 @@
 $(function() {
 // video slider
-let mainVideo = new Swiper('.main_video .swiper', {
+let mainVideoSlider = new Swiper('.main_video .swiper', {
   loop: true,
-  // allowTouchMove: false,
   speed: 500,
   autoplay: {
-    delay: 4000,
-    disableOnInteraction: false,
+    // delay: 4000,
+    // disableOnInteraction: false,
   },
   pagination: {
-
+    el: '.swiper-pagination',
+    type: 'fraction',
   },
   navigation: {
     nextEl: '.swiper-button-next',
@@ -17,5 +17,5 @@ let mainVideo = new Swiper('.main_video .swiper', {
   }
  });
  
-$('main_video', )
+// $('main_video', )
 })
