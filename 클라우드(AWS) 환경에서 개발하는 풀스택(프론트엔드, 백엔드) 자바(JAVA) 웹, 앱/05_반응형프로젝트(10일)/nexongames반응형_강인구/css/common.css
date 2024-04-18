@@ -1,20 +1,20 @@
 @font-face {
   font-family: 'NEXON Lv2 Gothic';
   font-style: normal;
+  font-weight: 300;
+  src: url(../fonts/NEXON_Lv2_Gothic_Light.eot);
+  src: url(../fonts/NEXON_Lv2_Gothic_Light.eot?#iefix) format('embedded-opentype'),
+    url(../fonts/NEXON_Lv2_Gothic_Light.woff) format('woff'),
+    url(../fonts/NEXON_Lv2_Gothic_Light.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'NEXON Lv2 Gothic';
+  font-style: normal;
   font-weight: 400;
   src: url(../fonts/NEXON_Lv2_Gothic.eot);
   src: url(../fonts/NEXON_Lv2_Gothic.eot?#iefix) format('embedded-opentype'),
     url(../fonts/NEXON_Lv2_Gothic.woff) format('woff'),
     url(../fonts/NEXON_Lv2_Gothic.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'NEXON Lv2 Gothic';
-  font-style: normal;
-  font-weight: 500;
-  src: url(../fonts/NEXON_Lv2_Gothic_Light.eot);
-  src: url(../fonts/NEXON_Lv2_Gothic_Light.eot?#iefix) format('embedded-opentype'),
-    url(../fonts/NEXON_Lv2_Gothic_Light.woff) format('woff'),
-    url(../fonts/NEXON_Lv2_Gothic_Light.ttf) format('truetype');
 }
 @font-face {
   font-family: 'NEXON Lv1 Gothic';
@@ -152,7 +152,7 @@ body {
 
 /*********************** 공통스타일 *************************/
 /* body에 높이가 없어도 hidden이 걸리면 스크롤바가 사라짐(데스크탑) */
-/* body.on {overflow: hidden;} */
+body.on {overflow: hidden;}
 /* iOS 사파리는 페이지최상단에서만 hidden이 걸리므로 페이지 위로 올라오게함(모바일,반응형) 즉 ios에서 어쩔 수 없이 쓰려면 아래 코드 사용. */
 /* body.on { overflow: hidden; position: fixed; left:0; top:0; width:100%; } */
 
