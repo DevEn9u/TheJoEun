@@ -106,4 +106,13 @@ $(function () {
   //   },
   // });
   // mainVideoSlider.controller.control = paginationProgress;
+
+  // main_worker 슬라이더
+  let mainWokrerSlider = new Swiper('.main_worker .swiper', {
+    loop: true,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+  });
 });
