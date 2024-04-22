@@ -71,6 +71,7 @@ $(function () {
         let idx = mainVideoSlider.realIndex + 1;
         $('.main_video .page_num .current').text(idx < 10 ? '0' + idx : idx);
 
+        // video slide 넘어갈 때 재생 초기화
         const videos = $('.main_video video');
     
         for (let i = 0; i < videos.length; i++) {
