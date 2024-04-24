@@ -1,0 +1,320 @@
+:root {
+  --point--color1: #cad401;
+  --point--color2: #019fe8;
+  --txt-color-400: #888;
+  --txt-color-500: #191b1d;
+  --txt-color-600: #222;
+}
+
+.sub_container .inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.sub_container {
+  padding-top: 130px;
+}
+.sub_container .contents {
+  padding: 100px 0;
+  position: relative;
+}
+.login_page .inner {
+  max-width: 460px;
+  margin: 0 auto;
+}
+.login_page .logo_wrap {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.login_page .logo_wrap h1 {
+  display: block;
+  width: 120px;
+  height: 20px;
+  margin-bottom: 20px;
+}
+.login_page .logo_wrap h1 a  {
+  display: block;
+  background: url(../images/set_new_logo.svg) no-repeat 0 0;
+  height: 20px;
+}
+
+.login_page .login_type {
+  display: flex;
+}
+.login_page .login_type>li>a {
+  width: 105px;
+  display: block;
+  text-align: center;
+  line-height: 28px;
+  padding-bottom: 1px;
+  font-size: 12px;
+  color: #9fa1a7;
+  font-weight: 700;
+}
+.login_page .login_type>li:not(:first-child) a {
+  border-bottom: 1px solid #e5e8eb;
+}
+.login_page .login_type .active a {
+  border-bottom: 2px solid #17191d;
+  color: #17191d;
+}
+.login_page .login_type li:hover a {
+  color: #07f;
+}
+
+.login_page .login_area {
+  margin-top: 60px;
+}
+.login_page .login_area .input_wrap1 {
+  margin-bottom: 12px;
+}
+.login_page .login_area .input_wrap2 {
+  margin-bottom: 3px;
+}
+.login_page .login_area input[type="text"],
+.login_page .login_area input[type="password"] {
+  width: 100%;
+  height: 56px;
+  border: 1px solid #e5e8eb;
+  font-size: 16px;
+  font-weight: 700;
+  transition: all 0.15s;
+}
+.login_page .login_area input[type="text"]:focus,
+.login_page .login_area input[type="password"]:focus {
+  border: 3px solid #07f;
+}
+.login_page .login_area input[type="text"]::placeholder,
+.login_page .login_area input[type="password"]::placeholder {
+  font-weight: 600;
+}
+
+.login_page .login_area .checkbox_wrap {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #666;
+}
+.login_page .login_area .login_btn {
+  display: block;
+  line-height: 60px;
+  background: #17191d;
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 24px;
+}
+
+.login_page .link_wrap {
+  display: flex;
+  gap: 0 10px;
+  padding-top: 12px;
+}
+.login_page .link_wrap > li > a {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: -1px;
+  color: #737881;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+/* 기업지배구조 corporate-governance */
+.sub_top .inner {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.sub_top .location {
+  /* margin-top: 50px; */
+  display: flex;
+  justify-content: end;
+  gap: 0 25px;
+  font-size: 15px;
+  color: #666;
+}
+.sub_top .location span:first-child {
+  position: relative;
+}
+.sub_top .location span:first-child::before {
+  content: '';
+  position: absolute;
+  left: -50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 16px;
+  height: 15px;
+  background: url(../images/breadcrumbs_home.png) no-repeat;
+}
+.sub_top .location span + span {
+  position: relative;
+}
+.sub_top .location span + span::before {
+  content: '>';
+  position: absolute;
+  top: 0;
+  left: -14px;
+}
+
+.sub_top h2 {
+  font-size: 66px;
+  font-weight: 700;
+  padding-bottom: 50px;
+}
+
+.contents .tit_wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  border-top: 1px solid #eaeaea;
+  border-bottom: 1px solid #eaeaea;
+  padding-top: 30px;
+}
+.contents .tit_wrap h3 {
+  font-size: 30px;
+  font-weight: 700;
+}
+.contents .stock_total {
+  display: flex;
+  align-items: center;
+  gap: 0 10px;
+}
+.contents .stock_total strong {
+  font-size: 30px;
+  font-weight: 700;
+}
+.contents .tit_wrap .date {
+  font-size: 15px;
+}
+
+.stock_wrap {
+  margin-top: 55px;
+}
+
+/* 게시판 */
+.board_list.council td {
+  height: 184px;
+  text-align: center;
+}
+.board_list.council tr:last-child td {
+  border-bottom: 1px solid #eaeaea;
+  word-break: keep-all;
+}
+.board_list.council tr:nth-last-child(2) td{
+  border-bottom: 1px solid #eaeaea;
+}
+.board_list.council tr:last-child {
+  color: var(--gray-600);
+  font-weight: 400;
+}
+
+.board_list.council tbody {
+  word-break: keep-all;
+  word-wrap: break-word;
+}
+.board_list.council tbody td {
+  padding: 15px 10px;
+}
+.board_list.council tbody td span {
+  display: block;
+  line-height: 1.8;
+}
+
+.board_list.council .col1 {
+  width: 23%;
+}
+.board_list.council .col3 {
+  width: 26%;
+}
+.board_list.council .col4 {
+  width: 43%;
+}
+
+
+
+/* 태블릿 분기점 */
+@media (max-width: 1200px) {
+  .sub_container {
+    padding-top: 0;
+  }
+  .sub_top {
+    padding-top: 60px;
+  }
+  .sub_top h2 {
+    font-size: 46px;
+    padding-bottom: 0;
+  }
+
+  .contents .tit_wrap {
+    padding-top: 0;
+    height: 90px;
+  }
+  .contents .tit_wrap h3 {
+    font-size: 17px;
+  }
+  .contents .stock_total p {
+    font-size: 15px;
+  }
+  .contents .stock_total strong {
+    font-size: 19px;
+  }
+  .contents .tit_wrap .date {
+    font-size: 15px;
+  }
+
+  .board_list.council tbody td {
+    padding: 18px 0;
+  }
+
+  .board_list.council .col1 {
+    width: 21%;
+  }
+  .board_list.council .col3 {
+    width: 25%;
+  }
+  .board_list.council .col4 {
+    width: 41%;
+  }
+}
+
+/* 모바일 분기점 */
+@media (max-width: 767px) {
+  .login_page .inner {
+    padding: 0 15px;
+  }
+
+  .governance.sub_container .contents {
+    padding: 40px 0;
+  }
+  .sub_top .location {
+    font-size: 13px;
+  }
+  .sub_top h2 {
+    font-size: 25px;
+    padding: 15px 0;
+  }
+
+  .contents .tit_wrap {
+    height: 60px;
+  }
+  .contents .tit_wrap h3 {
+    font-size: 15px;
+  }
+  .contents .stock_total p {
+    font-size: 14px;
+  }
+  .contents .stock_total strong {
+    font-size: 17px;
+  }
+  .contents .tit_wrap .date {
+    font-size: 13px;
+  }
+
+  
+}
