@@ -53,6 +53,8 @@ $(function () {
 
   // 주식 정보 숫자 카운팅
   function countNum(cnt, final, amount) {
+    // 요소가 없을 경우 return으로 함수실행 종료
+    if (!$('.main_info').length) return;
     let isScroll = false;
 
     $(window).on("scroll", function() {
@@ -96,6 +98,11 @@ $(function () {
       // offsetTop은 문서의 위치값 구하는 프로퍼티, .main_business의 위치값을 받아 변수 posY에 할당
       $('html, body').animate({ scrollTop: 0 });
   });
+
+  // 서브 페이지 공통 tab_btn
+  $('.sub_tab2 .tab_btn').on('click', function() {
+    $(this).parent().toggleClass('on');
+  })
 });
 
 /** header fixed에서

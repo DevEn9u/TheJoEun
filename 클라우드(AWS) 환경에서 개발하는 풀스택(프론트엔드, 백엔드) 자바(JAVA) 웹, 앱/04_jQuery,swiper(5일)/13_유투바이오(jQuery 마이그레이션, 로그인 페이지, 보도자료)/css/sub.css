@@ -35,6 +35,15 @@
   border: none;
 }
 
+/* contents inner 공통 */
+.contents .inner {
+  max-width: 1440px;
+  padding: 0 20px;
+  margin: 0 auto;
+  border: 1px solid red;
+  height: 800px;
+}
+
 .sub_container {
   padding-top: 100px;
 }
@@ -109,9 +118,131 @@
   font-size: 15px;
   color: #888;
 }
+
+/* 보도자료, release */
+.sub_top {
+  margin: 80px 0 65px;
+}
+.sub_top .inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.sub_top h2 {
+  font-size: 44px;
+  font-weight: 700;
+  color: var(--gray-600);
+}
+.sub_top .txt {
+  font-size: 22px;
+  color: var(--gray-600);
+  margin: 10px 0 30px;
+  font-weight: 500;
+}
+.sub_top .location {
+  font-size: 15px;
+  color: var(--point--color1);
+}
+.sub_top .location strong {
+  font-weight: 700;
+}
+.sub_top .location span {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  background: url(../images/icon_locat_slide.svg) no-repeat 50% 50%;
+  vertical-align: middle;
+}
+
+.sub_visual {
+  height: 400px;
+  background: url(../images/bg_aside04.png) no-repeat 50% 50% / cover;
+  padding-top: 200px;
+}
+.sub_visual .inner {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.sub_visual .sub_tab {
+  display: flex;
+  gap: 0 73px;
+}
+.sub_visual .sub_tab li + li {
+  position: relative;
+}
+.sub_visual .sub_tab li + li::before {
+  content: '';
+  position: absolute;
+  /* gap의 반만큼 이동 */
+  left: -37px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #fff;
+}
+.sub_visual .sub_tab a {
+  display: block;
+  font-size: 22px;
+  color: #fff;
+  font-weight: 500;
+  line-height: 70px;
+  border-radius: 35px 35px 35px 0;
+}
+.sub_visual .sub_tab li.active a {
+  background: #fff;
+  color: #2DBAB4;
+  padding: 0 60px;
+}
+
+.sub_visual .sub_tab2 {
+  display: none;
+}
+
+.contents .board_top {
+  
+}
+
+
 @media (max-width: 1200px) {
   .sub_container {
     padding-top: 80px;
+  }
+  
+  .sub_top {
+    padding: 70px 0 45px;
+    margin: 0;
+  }
+  .sub_top h2 {
+    font-size: 30px;
+  }
+  .sub_top .txt {
+    font-size: 18px;
+  }
+  .sub_top .location {
+    font-size: 14px;
+  }
+
+  .sub_visual {
+    height: 240px;
+    padding-top: 100px;
+  }
+  .sub_visual .sub_tab {
+    gap: 0 40px;
+  }
+  .sub_visual .sub_tab a {
+    font-size: 15px;
+    line-height: 60px;
+  }
+  .sub_visual .sub_tab li + li::before {
+    width: 4px;
+    height: 4px;
+    left: -22px;
+  }
+  .sub_visual .sub_tab li.active a {
+    padding: 0 30px;
   }
 }
 
@@ -121,5 +252,105 @@
   }
   .login_page .inner {
     padding: 0 15px;
+  }
+  
+  .sub_top {
+    padding: 50px 0 45px;
+  }
+  .sun_top .inner {
+    padding: 0 15px;
+  }
+  .sub_top .txt {
+    font-size: 14px;
+  }
+  .sub_top .location {
+    font-size: 12px;
+  }
+  .sub_visual {
+    height: 370px;
+    padding-top: 270px;
+  }
+  .sub_visual .sub_tab {
+    display: none;
+  }
+
+  .sub_visual .sub_tab2 {
+    display: block;
+    position: relative;
+    z-index: 100;
+  }
+  .sub_visual .sub_tab2 .tab_btn {
+    width: 100%;
+    height: 50px;
+    color: #2DBAB4;
+    font-size: 15px;
+    font-weight: 700;
+    border: none;
+    background: #fff;
+    border-radius: 25px;
+    position: relative;
+  }
+  .sub_visual .sub_tab2 .tab_btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 40px;
+    width: 10px;
+    height: 10px;
+    -webkit-mask: url(../images/arrow_btm.svg) no-repeat 0 0 / 100%;
+    mask: url(../images/arrow_btm.svg) no-repeat 0 0 / 100%;
+    background: #2DBAB4;
+    margin-top: -5px;
+    transition: all 0.3s;
+  }
+  .sub_visual .sub_tab2.on .tab_btn {
+    box-shadow: rgba(0, 0, 0, 0.07) 0 3px 10px;
+  }
+  .sub_visual .sub_tab2.on .tab_btn::after {
+    transform: rotate(180deg) translateY(3px);
+  }
+  .sub_visual .sub_tab2.on .tab_list {
+    max-height: 300px;
+    padding: 40px 0 10px;
+  }
+  .sub_visual .sub_tab2 .tab_list {
+    transition: all 0.3s;
+    max-height: 0;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    /* tab_btn의 높이 50px의 절반을 내려 상단 모서리 가림 */
+    top: 25px;
+    background: #f8f8f8;
+    /* position: absolute 지정해서 width가 줄어듬 */
+    width: 100%;
+    z-index: -1;
+    border-radius: 0 0 25px 25px;
+  }
+  .sub_visual .sub_tab2 .tab_list a {
+    display: block;
+    line-height: 50px;
+    padding: 0 20px 0 40px;
+    color: #999;
+    font-weight: 500;
+    font-size: 15px;
+    position: relative;
+  }
+  .sub_visual .sub_tab2 .tab_list a::before {
+    content: '';
+    position: absolute;
+    left: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 4px;
+    background: #999;
+    border-radius: 50%;
+  }
+  .sub_visual .sub_tab2 .tab_list li.active a {
+    color: #2DBAB4;
+  }
+  .sub_visual .sub_tab2 .tab_list li.active a::before {
+    background: #2DBAB4;
   }
 }

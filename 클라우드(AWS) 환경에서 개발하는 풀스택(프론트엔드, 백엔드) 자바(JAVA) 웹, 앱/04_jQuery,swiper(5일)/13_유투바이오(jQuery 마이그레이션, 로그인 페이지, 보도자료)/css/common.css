@@ -333,10 +333,12 @@ select::-ms-expand {
 
 .select_wrap {
   display: inline-block;
-  width: 192px;
+  max-width: 240px;
+  width: 100%;
   border: 1px solid #999;
   position: relative;
   z-index: 0;
+  background: #fff;
 }
 .select_wrap:after {
   content: '';
@@ -353,7 +355,7 @@ select::-ms-expand {
 .select_wrap select {
   width: 100%;
   border: none;
-  height: 38px;
+  height: 48px;
   padding: 0 10px;
   cursor: pointer;
   background: none;
@@ -648,6 +650,35 @@ textarea {
 caption.nohead {
   position: static;
 }
+
+/* 게시물 검색 */
+.board_search {
+  background: #f8f8f8;
+  display: flex;
+  justify-content: center;
+  gap: 0 10px;
+  padding: 56px;
+  margin: 120px 0 80px;
+}
+.board_search .search_wrap {
+  border: 1px solid #ddd;
+  max-width: 600px;
+  width: 100%;
+  display: flex;
+}
+.board_search input[type=search] {
+  height: 48px;
+  border: none;
+  width: calc(100% - 60px);
+}
+.board_search .search_btn {
+  width: 60px;
+  height: 48px;
+  border: none;
+  background: #fff url(../images/icon_search.svg) no-repeat 50% 50%;
+}
+
+
 /* board_list: 게시물 리스트, board_view: 게시물 보기, board_write(게시물 쓰기), board_modify(게시물 수정) */
 /* 게시판 리스트 */
 .board_list {
