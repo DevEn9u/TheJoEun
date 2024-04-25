@@ -7,13 +7,13 @@
 }
 
 .sub_container .inner {
-  max-width: 1440px;
+  max-width: 1320px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
 .sub_container {
-  padding-top: 130px;
+  padding-top: 180px;
 }
 .sub_container .contents {
   padding: 100px 0;
@@ -29,18 +29,20 @@
   left: 50%;
   transform: translate(-50%, 50%);
   display: flex;
+  gap: 10px 0;
   flex-direction: column;
   align-items: center;
 }
 .login_page .logo_wrap h1 {
-  display: block;
+  display: inline-block;
   width: 120px;
   height: 20px;
   margin-bottom: 20px;
 }
-.login_page .logo_wrap h1 a  {
-  display: block;
+.login_page .logo_wrap h1 a {
   background: url(../images/set_new_logo.svg) no-repeat 0 0;
+  display: block;
+  width: 120px;
   height: 20px;
 }
 
@@ -69,7 +71,7 @@
 }
 
 .login_page .login_area {
-  margin-top: 60px;
+  margin-top: 80px;
 }
 .login_page .login_area .input_wrap1 {
   margin-bottom: 12px;
@@ -164,17 +166,19 @@
 .sub_top h2 {
   font-size: 66px;
   font-weight: 700;
-  padding-bottom: 50px;
 }
 
 .contents .tit_wrap {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 100px;
+  height: 88px;
   border-top: 1px solid #eaeaea;
   border-bottom: 1px solid #eaeaea;
-  padding-top: 30px;
+  padding: 50px 0 20px;
+}
+.contents .tit_wrap.stock_holder_total {
+  height: 108px;
 }
 .contents .tit_wrap h3 {
   font-size: 30px;
@@ -197,44 +201,107 @@
   margin-top: 55px;
 }
 
-/* 게시판 */
-.board_list.council td {
+/* 기업지배구조 표 */
+.tbl.council td {
   height: 184px;
   text-align: center;
 }
-.board_list.council tr:last-child td {
+.tbl.council tr:last-child td {
   border-bottom: 1px solid #eaeaea;
   word-break: keep-all;
 }
-.board_list.council tr:nth-last-child(2) td{
+.tbl.council tr:nth-last-child(2) td{
   border-bottom: 1px solid #eaeaea;
 }
-.board_list.council tr:last-child {
+.tbl.council tr:last-child {
   color: var(--gray-600);
   font-weight: 400;
 }
 
-.board_list.council tbody {
+.tbl.council tbody {
   word-break: keep-all;
   word-wrap: break-word;
 }
-.board_list.council tbody td {
+.tbl.council tbody td {
   padding: 15px 10px;
 }
-.board_list.council tbody td span {
+.tbl.council tbody td span {
   display: block;
   line-height: 1.8;
 }
 
-.board_list.council .col1 {
+.tbl.council .col1 {
   width: 23%;
 }
-.board_list.council .col3 {
+.tbl.council .col3 {
   width: 26%;
 }
-.board_list.council .col4 {
+.tbl.council .col4 {
   width: 43%;
 }
+
+/* 공고 게시판 서브페이지 */
+.sub_container.account .contents {
+  padding-top: 30px;
+}
+.sub_container.account .sub_top h2 {
+  margin-top: 20px;
+  margin-bottom: 150px;
+}
+.sub_top .board_category_wrap {
+  margin-bottom: 35px;
+  border-top: 1px solid #eaeaea;
+  border-bottom: 1px solid #eaeaea;
+  padding: 30px;
+}
+.sub_top .board_category {
+  display: flex;
+  justify-content: space-between;
+}
+.sub_top .board_category li {
+  width: 100%;
+  text-align: center;
+}
+.sub_top .board_category li a {
+  display: block;
+  font-size: 21px;
+}
+.sub_top .board_category li.active a {
+  font-weight: 700;
+}
+.sub_top .board_category li + li {
+  position: relative;
+}
+.sub_top .board_category li + li::before {
+  content: '';
+  position: absolute;
+  left:0;
+  top: 0;
+  width: 1px;
+  height: 24px;
+  background: #eaeaea;
+}
+
+/* 공고 게시판 읽기 페이지 */
+.account_view .tit_wrap {
+  flex-direction: column;
+  align-items: flex-start;
+  height: auto;
+  border-top: none;
+  border-bottom: none;
+  padding: 0;
+}
+.account_view .tit_wrap h3 {
+  margin-bottom: 15px;
+  font-size: 36px;
+}
+.account_view .tit_wrap .date {
+  font-size: 14px;
+  color: #aeaeae;
+  margin-bottom: 15px;
+}
+
+
 
 
 
@@ -243,6 +310,10 @@
   .sub_container {
     padding-top: 0;
   }
+  .governance.sub_container .contents {
+    padding: 70px 0;
+  }
+  
   .sub_top {
     padding-top: 60px;
   }
@@ -252,8 +323,8 @@
   }
 
   .contents .tit_wrap {
-    padding-top: 0;
-    height: 90px;
+    padding: 0;
+    height: 63px;
   }
   .contents .tit_wrap h3 {
     font-size: 17px;
@@ -264,23 +335,54 @@
   .contents .stock_total strong {
     font-size: 19px;
   }
+  .contents .tit_wrap.stock_holder_total {
+    height: 92px;
+  }
   .contents .tit_wrap .date {
-    font-size: 15px;
+    font-size: 13px;
   }
 
-  .board_list.council tbody td {
+  .tbl.council tbody td {
     padding: 18px 0;
   }
 
-  .board_list.council .col1 {
+  .tbl.council .col1 {
     width: 21%;
   }
-  .board_list.council .col3 {
+  .tbl.council .col3 {
     width: 25%;
   }
-  .board_list.council .col4 {
+  .tbl.council .col4 {
     width: 41%;
   }
+
+  .account_view.sub_container .contents {
+    padding: 0 0 100px;
+  }
+  .sub_top .board_category_wrap {
+    padding: 10px;
+  }
+  .sub_top .board_category li a {
+    height: 63px;
+    padding: 20px;
+    font-size: 20px;
+  }
+
+  .account_view .sub_top {
+    padding-top: 60px;
+  }
+  .sub_container.account_view .sub_top h2 {
+    margin-bottom: 70px;
+  }
+  .account_view .tit_wrap h3 {
+    font-size: 36px;
+  }
+  .account_view .tit_wrap .date {
+    font-size: 14px;
+  }
+
+
+
 }
 
 /* 모바일 분기점 */
@@ -291,6 +393,9 @@
 
   .governance.sub_container .contents {
     padding: 40px 0;
+  }
+  .sub_top {
+    padding-top: 50px;
   }
   .sub_top .location {
     font-size: 13px;
@@ -316,5 +421,19 @@
     font-size: 13px;
   }
 
-  
+  .account.sub_container .contents {
+    padding: 30px 0 50px 0;
+  }
+  .sub_container.account .sub_top h2 {
+    margin-bottom: 40px;
+  }
+  .sub_top .board_category_wrap {
+    padding: 10px 0;
+    margin-bottom: 20px;
+  }
+  .sub_top .board_category li a {
+    padding: 5px;
+    font-size: 14px;
+    height: auto;
+  }
 }
