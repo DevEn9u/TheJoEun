@@ -36,12 +36,13 @@
 }
 
 /* contents inner 공통 */
+.contents {
+  padding: 120px 0 160px;
+}
 .contents .inner {
   max-width: 1440px;
   padding: 0 20px;
   margin: 0 auto;
-  border: 1px solid red;
-  height: 800px;
 }
 
 .sub_container {
@@ -52,7 +53,7 @@
 }
 
 .login_page .inner {
-  max-width: 458px;
+  max-width: 448px;
   margin: 0 auto;
 }
 .login_page .login_area {
@@ -201,9 +202,12 @@
   display: none;
 }
 
-.contents .board_top {
-  
+.release .board_search {
+  margin-bottom: 80px;
 }
+
+
+/* 보도자료 게시판 */
 
 
 @media (max-width: 1200px) {
@@ -243,6 +247,22 @@
   }
   .sub_visual .sub_tab li.active a {
     padding: 0 30px;
+  }
+
+  .contents {
+    padding: 80px 0 120px;
+  }
+
+  /* 보도자료, release */
+  .release .board_search {
+    padding: 40px;
+    margin: 80px 0 30px;
+  }
+  .release .board_search select {
+    font-size: 16px;
+  }
+  .release .board_search input[type=search] {
+    font-size: 16px;
   }
 }
 
@@ -352,5 +372,34 @@
   }
   .sub_visual .sub_tab2 .tab_list li.active a::before {
     background: #2DBAB4;
+  }
+
+  .contents {
+    padding: 40px 0 100px;
+  }
+  .contents .inner {
+    padding: 0 15px;
+  }
+
+
+  /* 보도자료 */
+  .release .board_search {
+    padding: 15px;
+    margin: 40px 0 30px;
+  }
+  .release .board_search select {
+    font-size: 13px;
+    /* .board_search가 flex기 때문에 안에 있는 모든 item의 높이를 줄여야 줄어듬. */
+    height: 38px;
+  }
+  .release .board_search input[type=search] {
+    font-size: 13px;
+    height: 38px;
+    /* 버튼의 width만큼 빼줌 */
+    width: calc(100% - 40px);
+  }
+  .release .board_search .search_btn {
+    width: 40px;
+    height: 38px;
   }
 }
