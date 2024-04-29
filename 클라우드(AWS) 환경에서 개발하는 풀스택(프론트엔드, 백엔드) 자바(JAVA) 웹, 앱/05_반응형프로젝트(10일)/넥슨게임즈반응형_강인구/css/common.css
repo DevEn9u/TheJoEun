@@ -971,6 +971,7 @@ caption.nohead {
 
   .tbl th {
     height: 56px;
+    padding: 18px 0;
     font-size: 18px;
   }
   .tbl td {
@@ -1040,11 +1041,12 @@ caption.nohead {
   }
 
   .tbl th {
-    height: 56px;
-    font-size: 18px;
+    height: 44px;
+    padding: 12px 0;
+    font-size: 12px;
   }
   .tbl td {
-    font-size: 18px;
+    font-size: 12px;
   }
 }
 

@@ -15,16 +15,10 @@ $(function () {
   $("#header .gnb>li").on("mouseenter", function () {
     $("#header").addClass("on");
   });
-
   $('#header .gnb_wrap').on('mouseleave', function() {
     $('#header').removeClass('on');
   });
-  // $('#header .lang_wrap').on('mouseenter', function() {
-  //   $('#header').removeClass('on');
-  // })
-  // $('#header .logo').on('mouseenter', function() {
-  //   $('#header').removeClass('on');
-  // })
+
 
   // 사이드 메뉴 작동
   $("#header .open_btn").on("click", function () {
@@ -46,27 +40,11 @@ $(function () {
   // video slider
   let mainVideoSlider = new Swiper(".main_video .swiper", {
     loop: true,
-    // speed: 500,
     watchSlidesProgress: true,
     autoplay: {
-      delay: 10000,
+      delay: 15000,
       disableOnInteraction: false,
     },
-    // pagination: {
-    //   el: '.pagination_number',
-    //   type: 'fraction',
-    //   formatFractionCurrent: function (number) {
-    //     return (number < 10 ? '0' + number : number);
-    //   },
-    //   formatFractionTotal: function (number) {
-    //     return (number < 10 ? '0' + number : number);
-    //   },
-    //   renderFraction: function (currentClass, totalClass) {
-    //     return '<span class="' + currentClass + '"></span>' +
-    //       ' / ' +
-    //       '<span class="' + totalClass + '"></span>';
-    //   },
-    // },
     pagination: {
       el: ".swiper-pagination",
       type: "progressbar",
@@ -79,6 +57,7 @@ $(function () {
     },
     on: {
       slideChange: function () {
+        // video pagination progress num
         let totalSlide = $(".main_video .swiper-slide").length;
         $(".main_video .page_num .total").text(
           totalSlide < 10 ? "0" + totalSlide : totalSlide
@@ -93,7 +72,6 @@ $(function () {
         for (let i = 0; i < videos.length; i++) {
           videos[i].currentTime = 0;
           videos[i].play();
-          // console.log(videos[i], videos);
         }
       },
     },

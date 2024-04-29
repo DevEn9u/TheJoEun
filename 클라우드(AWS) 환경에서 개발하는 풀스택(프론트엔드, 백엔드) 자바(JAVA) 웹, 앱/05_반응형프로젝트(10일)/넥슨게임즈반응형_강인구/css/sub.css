@@ -461,4 +461,8 @@
   .account_view .sub_top {
     padding-top: 100px;
   }
+
+  .tbl.council tbody td {
+    padding: 18px 2px;
+  }
 }
