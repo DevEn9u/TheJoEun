@@ -979,7 +979,7 @@
   #footer .footer_menu {
     gap: 0 30px;
   }
-  #footer .footer_menu > li > a {
+  #footer .footer_menu>li>a {
     font-size: 9px;
   }
   #footer .menu_list li {
@@ -987,6 +987,7 @@
     height: 15px;
   }
   #footer .menu_list a {
+    vertical-align: top;
     font-size: 9px;
   }
   #footer .footer_bottom {
@@ -1291,11 +1292,11 @@
     flex-wrap: wrap;
     gap: 30px 50px;
   }
-  #footer .footer_menu > li > a {
+  #footer .footer_menu>li> a {
     font-size: 12px;
   }
   #footer .menu_list li {
-    margin-bottom: 0;
+    margin-bottom: 4px;
   }
   #footer .menu_list a {
     font-size: 12px;

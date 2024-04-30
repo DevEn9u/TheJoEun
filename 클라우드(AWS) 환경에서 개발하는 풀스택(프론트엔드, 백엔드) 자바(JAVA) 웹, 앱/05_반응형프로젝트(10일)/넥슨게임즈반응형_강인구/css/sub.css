@@ -231,7 +231,6 @@
 
 .tbl.council tbody {
   word-break: keep-all;
-  word-wrap: break-word;
 }
 .tbl.council tbody td {
   padding: 15px 10px;
