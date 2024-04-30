@@ -192,10 +192,10 @@ body, input, select, textarea, button, table {
 }
 
 /* 텍스트 선택 컬러 */
-/* ::selection {
-  background: #333;
-  color: #ffffff;
-} */
+::selection {
+  background: #000;
+  color: #fff;
+}
 
 /* legend,caption, 섹션제목 안보이게 */
 legend, caption, .blind {

@@ -67,8 +67,102 @@
   margin-right: 7px;
 }
 
+/* main_product */
+.main_product {
+  padding: 40px 0 140px;
+}
+/* inner는 가로길이를 설정하기 위해 넣는 것임 */
+.main_product .inner {
+  max-width: 1690px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+.main_product h2 {
+  text-align: center;
+  font-family: 'Binggrae-bold', sans-serif;
+  font-size: 38px;
+  color: var(--gray-600);
+  font-weight: 700;
+  margin-bottom: 20px;
+}
 
+.main_product .swiper {
+  padding-top: 20px;
+  max-width: 1542px;
+  position: static;
+}
+.main_product .swiper a {
+  /* inline element는 transition 적용 안됨 */
+  display: block;
+  transition: all 1.5s;
+}
+.main_product .swiper img {
+  width: 100%;
+}
+.main_product .swiper h3 {
+  text-align: center;
+  line-height: 43px;
+  background: #f9f9f9;
+  font-size: 16px;
+  color: var(--gray-600);
+  border-radius: 22px;
+  margin-top: 12px;
+  position: relative;
+}
+.main_product .swiper h3::after {
+  content: 'VIEW MORE';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  background: var(--point--color1);
+  border-radius: 22px;
+  color: #fff;
+  display: none;
+}
+@media (min-width: 768px) {
+  .main_product .swiper a:hover {
+    transform: translateY(-10px);
+  }
+  .main_product .swiper a:hover h3::after {
+    display: block;
+  } 
+}
 
+.main_product .swiper {
+  /* swiper에 overflow:hidden이 적용돼 prev,next button을 밖으로 꺼낼 수 없어 static을 만들고 swiper_wrap에 relative 적용 */
+  position: static;
+}
+.main_product .swiper_wrap {
+  position: relative;
+  padding: 0 50px;
+}
+.main_product .swiper .arrow_btn {
+  left: 0;
+  width: 20px;
+  height: 30px;
+  margin-top: -15px;
+  background: url(../images/prev_arrow.png) no-repeat 50% 50%;
+}
+.main_product .swiper .arrow_btn::after {
+  display: none;
+}
+.main_product .swiper .swiper-button-next {
+  transform: rotate(180deg);
+  left: auto;
+  right: 0;
+}
+.main_product .swiper .swiper-button-disabled {
+  opacity: 0.1;
+  pointer-events: all;
+  cursor: pointer;
+}
+
+.main_product .swiper .swiper-pagination {
+  display: none;
+}
+
+/* 태블릿 분기점 */
 @media (max-width: 1200px) {
   .main_visual .pc_img {
     display: none;
@@ -90,6 +184,8 @@
   }
 }
 
+
+/* 모바일 분기점 */
 @media (max-width: 767px) {
   .main_visual {
     padding: 130px 0 60px;
@@ -130,5 +226,42 @@
     line-height: 30px;
     /* font-size: 10px은 깨질 수 있음 */
     font-size: 11px;
+  }
+  
+  .main_product {
+    padding-bottom: 50px;
+  }
+  .main_product h2 {
+    font-size: 22px;
+    margin-bottom: 0;
+  }
+  .main_product .swiper_wrap {
+    padding: 0;
+  }
+  .main_product .swiper {
+    padding-bottom: 40px;
+  }
+  .main_product .swiper-slide {
+    height: auto;
+    margin-top: 14px !important;
+  }
+  .main_product .swiper h3 {
+    background: none;
+    line-height: normal;
+  }
+  .main_product .swiper .arrow_btn {
+    display: none;
+  }
+
+  .main_product .swiper .swiper-pagination {
+    display: block;
+  }
+  .main_product .swiper .swiper-pagination-bullet {
+    width: 6px;
+    height: 6px;
+    margin: 0 8px;
+  }
+  .main_product .swiper .swiper-pagination-bullet-active {
+    background: var(--gray-600);
   }
 }
